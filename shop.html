@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Shopping Mall</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            img{
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            body{
+                font-family: 'Pacifico', cursive;
+            }
+            h1,p{
+                text-align: center;
+                line-height: 1.6;
+            }
+            .medium{
+                font-size:medium ;
+            }
+            .mypost {
+                width: 95%;
+                max-width: 500px;
+                margin: 20px auto 0px auto;
+                padding: 20px;
+                box-shadow: 0px 0px 3px 0px gray;
+                text-align:left;
+            }   
+            .mybutton{
+                display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            } 
+        </style>  
+        <script>
+            function checkInputs() {
+                // Get all input elements
+                var inputs = document.querySelectorAll('input');
+          
+                // Check if any input is empty
+                for (var i = 0; i < inputs.length; i++) {
+                  if (inputs[i].value.trim() === '') {
+                    // Display a warning window
+                    alert('Please fill out all fields');
+                    return;
+                  }
+                }
+          
+                // If all inputs are filled, proceed with the order
+                alert('Order placed successfully!');
+                // Add code to submit the form or proceed with the order logic
+            }
+        </script> 
+    </head>
+    <body>
+        <img src="candles.jpg">
+        <h1>Sparta Candles For Shopping
+            <span class="medium">Price $3 each</span>
+        </h1>
+        <p>These candles actually have special power!!</p>
+        <div class="mypost">
+            <div class="form-floating mb-3">
+                <label for="Text">Your Name</label>
+                <input type="text" class="form=control" id="name" placeholder="Enter your name"><br>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Quantity</label>
+                        <input type="number" placeholder="--Please Select Quantity--"><br>
+                <label for="adr">Address</label>
+            <input type="text" id="adr" name="Address" placeholder="Enter Your Address"><br>
+            <label for="tel">Phone Number</label>
+            <input type="text" name="number">
+            </div>
+            <div class="mybutton">
+                <button onclick="checkInputs()" type="button" class="btn btn-dark">Order</button>
+            </div>
+        </div>
+    </body>
+</html>
